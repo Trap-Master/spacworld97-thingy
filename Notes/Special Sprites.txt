@@ -1,0 +1,12 @@
+special FadeOutMusic
+special RestartMapMusic
+
+Defines that do what they say. Sprites may be a problem with loading on new maps but there are three files that might help.
+
+data/maps/setup_scripts.asm
+
+constants/map_setp_constants.asm
+
+engine/overworld/map_setup
+
+Goal is to try something like doing a map callback to reload the sprites or map like you would do on a warp.

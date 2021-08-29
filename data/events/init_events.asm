@@ -1,0 +1,32 @@
+InitialEvents:
+	dw EVENT_HIDE_STUMP
+	dw EVENT_HIDE_CHRIS
+	dw EVENT_INITIALIZED_EVENTS
+	dw -1 ; end
+
+InitialEngineFlags:
+	dw ENGINE_ROCKET_SIGNAL_ON_CH20
+	dw ENGINE_ROCKETS_IN_MAHOGANY
+	dw ENGINE_POKEGEAR
+	dw ENGINE_PHONE_CARD
+	dw ENGINE_MAP_CARD
+	dw -1 ; end
+
+InitialVariableSprites:
+initvarsprite: MACRO
+; variable sprite, appearance sprite
+	db \1 - SPRITE_VARS, \2
+ENDM
+	initvarsprite SPRITE_FUCHSIA_GYM_1, SPRITE_JANINE
+	initvarsprite SPRITE_FUCHSIA_GYM_2, SPRITE_JANINE
+	initvarsprite SPRITE_COPYCAT, SPRITE_LASS
+	initvarsprite SPRITE_NPC1, SPRITE_TEACHER
+	initvarsprite SPRITE_NPC2, SPRITE_FISHER
+	initvarsprite SPRITE_NPC3, SPRITE_YOUNGSTER
+	initvarsprite SPRITE_NPC4, SPRITE_LASS
+	initvarsprite SPRITE_NPC5, SPRITE_COOLTRAINER_M
+	initvarsprite SPRITE_NPC6, SPRITE_STUMP
+	initvarsprite SPRITE_NPC7, SPRITE_COOLTRAINER_F
+	initvarsprite SPRITE_NPC8, SPRITE_CAMPER_F
+	initvarsprite SPRITE_NPC9, SPRITE_CAMPER_M
+	db -1 ; end
